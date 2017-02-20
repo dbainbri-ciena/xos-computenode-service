@@ -32,7 +32,7 @@ class ComputeNodeServiceForm(forms.ModelForm):
         if self.instance:
             self.fields['nodeId'].initial = self.instance.nodeId
             self.fields['hostname'].initial = self.instance.hostname
-	    self.fields['management_address'].initial = self.instance.management_address
+            self.fields['management_address'].initial = self.instance.management_address
             self.fields['fabric_address'].initial = self.instance.fabric_address
             self.fields['hardward_address'].initial = self.instance.hardward_address
             self.fields['role'].initial = self.instance.role
@@ -40,7 +40,7 @@ class ComputeNodeServiceForm(forms.ModelForm):
     def save(self, commit=True):
         self.instance.nodeId = self.cleaned_data.get('nodeId')
         self.instance.hostname = self.cleaned_data.get('hostname')
-	self.instance.management_address = self.cleaned_data.get('management_address')
+        self.instance.management_address = self.cleaned_data.get('management_address')
         self.instance.fabric_address = self.cleaned_data.get('fabric_address')
         self.instance.hardward_address = self.cleaned_data.get('hardward_address')
         self.instance.role = self.cleaned_data.get('role')
@@ -59,7 +59,7 @@ class ComputeNodeServiceAdmin(ReadOnlyAwareAdmin):
     list_display_links = ('backend_status_icon', 'name', )
     fieldsets = [(None, {'fields': ['backend_status_text', 'name','enabled','versionNumber','description','view_url','icon_url',
                                     'nodeId', 'hostname', 'management_address', 'fabric_address', 'hardward_address', 'role'],
-				    'classes':['suit-tab suit-tab-general']})]
+                                    'classes':['suit-tab suit-tab-general']})]
     readonly_fields = ('backend_status_text', )
     inlines = [SliceInline,ServiceAttrAsTabInline,ServicePrivilegeInline]
 

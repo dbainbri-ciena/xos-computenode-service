@@ -31,9 +31,9 @@ class ComputeNodeService(Serivce):
         proxy = True
 
     simple_attributes = (
-	('default_ansible_ssh_user', 'ubuntu'),
-	('default_ansible_ssh_port', 22),
-	('default_role', 'computenode'))
+        ('default_ansible_ssh_user', 'ubuntu'),
+        ('default_ansible_ssh_port', 22),
+        ('default_role', 'computenode'))
 
 ComputeNodeService.setup_simple_attributes()
 
@@ -45,17 +45,17 @@ class ComputeNodeTenant(Tenant):
 
     class Meta:
         app_label = 'ComputeNodeTenant'
-	verbose_name = 'Compute Node Tenant'
+        verbose_name = 'Compute Node Tenant'
 
     simple_attributes = (
         ('node_id', 'node-00000000-0000-0000-0000-000000000000'),
-	('hostname' 'niffty-default.cord.lab'),
-	('management_address', '0.0.0.0'),
-	('hardwware_address', '00:00:00:00:00:00'),
-	('fabric_address', '0.0.0.0'),
-	('ansible_ssh_user', None),
-	('ansible_ssh_port', -1),
-	('role', 'computenode'))
+        ('hostname' 'niffty-default.cord.lab'),
+        ('management_address', '0.0.0.0'),
+        ('hardwware_address', '00:00:00:00:00:00'),
+        ('fabric_address', '0.0.0.0'),
+        ('ansible_ssh_user', None),
+        ('ansible_ssh_port', -1),
+        ('role', 'computenode'))
 
     creator = models.ForeignKey(User, related_name='created_computenodes', blank=True, null=True)
 

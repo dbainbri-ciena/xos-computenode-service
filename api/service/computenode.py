@@ -61,7 +61,7 @@ class ComputeNodeViewSet(XOSViewSet):
         return patterns
 
     def get_nodes(self, request, pk=None):
-	return Response(list(ComputeNodeService.objects.all()))
+        return Response(list(ComputeNodeService.objects.all()))
 
     def get_node(self, request, pk=None):
-	return Response(list(ComputeNodeService.objects.filter(hostname=pl)))
+        return Response(list(ComputeNodeService.objects.filter(hostname=pl)))

@@ -22,7 +22,7 @@ class SyncComputeNodeService(SyncUsingAnsible):
     template_name = "compute_node_playbook.yaml"
 
     def get_node_key(self, n):
-	return "/opt/cord/orchestration/service-profile/cord-pod/id_rsa"
+        return "/opt/cord/orchestration/service-profile/cord-pod/id_rsa"
 
     def __init__(self, *args, **kwargs):
         super(SyncComputeNodeService, self).__init__(*args, **kwargs)
@@ -39,8 +39,8 @@ class SyncComputeNodeService(SyncUsingAnsible):
         }
 
     def fetch_pending(self, deleted):
-	logger.error("IN PENDING: %s" % deleted)
-	logger.error(ComputeNodeService.get_service_objects().all())
+        logger.error("IN PENDING: %s" % deleted)
+        logger.error(ComputeNodeService.get_service_objects().all())
 
         if (not deleted):
             objs = ComputeNodeService.get_service_objects().filter(
