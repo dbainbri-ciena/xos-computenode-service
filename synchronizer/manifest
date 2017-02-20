@@ -1,0 +1,10 @@
+computenode-onboard.yaml
+computenode-synchronizer.py
+computenode_synchronizer_config
+manifest
+model-deps
+run.sh
+start.sh
+steps/sync_computenode.py
+stop.sh
+supervisor/vtn-observer.conf
